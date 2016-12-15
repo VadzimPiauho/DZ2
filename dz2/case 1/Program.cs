@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace case_1
 {
-    class Car
+    partial class  Car
     {
         private int milage;
         private string mark;
@@ -15,33 +15,8 @@ namespace case_1
         private int maxSpeed;
 
         public static string carForeign;
-        public static int YearOfIssueNotLower;
-
-        public int Milage
-        {
-            get { return milage; }
-            set { milage = value; }
-        }
-        public string Mark
-        {
-            get { return mark; }
-            set { mark = value; }
-        }
-        public bool Gasoline
-        {
-            get { return gasoline; }
-            set { gasoline = value; }
-        }
-        public int EnginePower
-        {
-            get { return enginePower; }
-            set { enginePower = value; }
-        }
-        public int MaxSpeed
-        {
-            get { return maxSpeed; }
-            set { maxSpeed = value; }
-        }
+        public static int YearOfIssueNotLower;              
+        
         public Car()
         {
             milage = 0;
@@ -50,13 +25,7 @@ namespace case_1
             enginePower = 0;
             maxSpeed = 0;
             //Print();
-        }
-
-        static Car()
-        {
-            carForeign = "carEurope";
-            YearOfIssueNotLower = 1990;
-        }
+        }       
         public Car(int _milage, string _mark, bool _Gasoline, int _enginePower, int _maxSpeed)
         {
             milage = _milage;
@@ -87,15 +56,7 @@ namespace case_1
             Console.WriteLine("Gasoline = " + obj.gasoline);
             Console.WriteLine("enginePower = " + obj.enginePower);
             Console.WriteLine("maxSpeed = " + obj.maxSpeed);
-        }
-        //public void Print(int i,ref Car[] obj)
-        //{
-        //        Console.WriteLine("milage = " + obj[i].milage);
-        //        Console.WriteLine("mark = " + obj[i].mark);
-        //        Console.WriteLine("Gasoline = " + obj[i].gasoline);
-        //        Console.WriteLine("enginePower = " + obj[i].enginePower);
-        //        Console.WriteLine("maxSpeed = " + obj[i].maxSpeed);
-        //}
+        }      
     }
 
     class Program
@@ -107,7 +68,7 @@ namespace case_1
             Car[] car3Cars = new Car[5];
             for (int i = 0; i < car3Cars.Length; i++)
             {
-                car3Cars[i].Print();
+                car3Cars[i] = new Car();
             }
             Car2.Print();
             Console.WriteLine();
