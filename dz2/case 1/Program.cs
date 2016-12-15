@@ -70,6 +70,7 @@ namespace case_1
             {
                 car3Cars[i] = new Car();
             }
+            
             //Car2.Print();
             Console.WriteLine();
             Car1.MaxSpeed = 9;
